@@ -4,7 +4,7 @@ class Usuario extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
-		// $this->load->library('session');
+		$this->load->library('session');
 		$this->load->model('usuarios_model');
 		$this->load->model('sesiones_model');
 	}
@@ -168,6 +168,7 @@ class Usuario extends CI_Controller {
 
 		$this->load->view('all_referidos', $data);
 	}
+
 	function consultar($user) {
 		$data['usuario'] = $this->usuarios_model->get_user_by_name($user);
 
@@ -178,6 +179,35 @@ class Usuario extends CI_Controller {
 		$data['usuario'] = $this->usuarios_model->get_user_by_name($user);
 
 		$this->load->view('usuario', $data);
+	}
+
+	function arbol_referidos() {
+		$dbh = new PDO('mysql:host=' . $this->db->hostname . ';dbname=' . $this->db->database . '', $this->db->username, $this->db->password);
+		$dbs = $dbh->query("SELECT usuario as name, referido_por from usuarios");
+		$dbs->execute();
+
+		$row = $dbs->fetchAll(PDO::FETCH_ASSOC);
+		$tree = $this->buildTree($row, $_SESSION['usuario']);
+		$final = array("name" => $_SESSION['usuario'], "referido_por" => "", "children" => $tree);
+		$data['usuarios'] = json_encode($final, JSON_PRETTY_PRINT);
+		$this->load->view('arbol_referidos', $data);
+	}
+
+	function buildTree(array $elements, $parentId = null) {
+
+		$branch = array();
+
+		foreach ($elements as $element) {
+			if ($element['referido_por'] == $parentId) {
+				$children = $this->buildTree($elements, $element['name']);
+
+				if ($children) {
+					$element['children'] = $children;
+				}
+				$branch[] = $element;
+			}
+		}
+		return $branch;
 	}
 
 }

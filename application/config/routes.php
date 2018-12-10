@@ -1,8 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-/*
- */
 $route['sesiones'] = 'sesiones';
 $route['login'] = 'sesiones/index';
 $route['logout'] = 'sesiones/logout';
@@ -14,6 +11,7 @@ $route['admin/editar/(:any)'] = 'usuario/editar/$1';
 $route['agregar_referido'] = 'usuario/agregar_referido';
 $route['pedido'] = 'usuario/realizar_pedido';
 $route['listado_referidos'] = 'usuario/listado_referidos';
+$route['cat_referidos'] = 'usuario/arbol_referidos';
 $route['usuario'] = 'usuario/add';
 $route['cliente'] = 'home/cliente';
 $route['admin'] = 'home/admin';
