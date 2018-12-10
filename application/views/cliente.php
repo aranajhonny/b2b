@@ -222,6 +222,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<span class="title">Mis Referidos</span>
 								<!-- <span class="arrow"></span> -->
 							</a>
+
 <!-- 							<ul class="sub-menu">
 								<li class="nav-item  ">
 									<a href="Referidos" class="nav-link ">
@@ -235,6 +236,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 							</ul> -->
 						</li>
+                        <li class="nav-item  ">
+                            <a href="cat_referidos" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Categorización de Referidos</span>
+                            </a>
+                        </li>
                         <li class="nav-item  ">
                             <a href="bonos_ganancias" class="nav-link nav-toggle">
                                 <i class="fa fa-money"></i>
