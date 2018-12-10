@@ -224,7 +224,13 @@ License: You must have a valid license purchased only from themeforest(the above
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="nuevo" class="nav-link nav-toggle">
+                            <a href="cat_referidos" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Categorización de Referidos</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="agregar_referido" class="nav-link nav-toggle">
                                 <i class="fa fa-user-plus"></i>
                                 <span class="title">Nuevo</span>
                             </a>

@@ -199,7 +199,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
 					<ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 						<li class="nav-item start active ">
-							<a href="principio_lider" class="nav-link nav-toggle">
+							<a href="" class="nav-link nav-toggle">
 								<i class="icon-home"></i>
 								<span class="title">Inicio</span>
 								<span class="selected"></span>
@@ -220,6 +220,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<span class="title">Mis Referidos</span>
 								<!-- <span class="arrow"></span> -->
 							</a>
+							<li class="nav-item  ">
+                            <a href="cat_referidos" class="nav-link nav-toggle">
+                                <i class="icon-users"></i>
+                                <span class="title">Categorización de Referidos</span>
+                            </a>
+                        </li>
 <!-- 							<ul class="sub-menu">
 								<li class="nav-item  ">
 									<a href="Referidos" class="nav-link ">
